@@ -46,9 +46,9 @@ def main():
             )
 
             # Maintain list of closing prices for MA calculation
-            last_30_days_closing_prices = []
-            for i, closing_price in enumerate(data["Close"].head(30)):
-                last_30_days_closing_prices.append(closing_price)
+            last_30_days_closing_prices = [
+                closing_price for closing_price in data["Close"].head(30)
+            ]
 
             # Remove first 30 days data
             data = data.iloc[30:]
