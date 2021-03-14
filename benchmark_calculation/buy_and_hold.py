@@ -85,6 +85,8 @@ def main():
 
     print(get_buy_and_hold_metrics(ticker_to_closing_price_list))  # (0.0006957621524140783, 0.01335452332304571)
 
+    # S&P 500 data from https://www.wsj.com/market-data/quotes/index/SPX/historical-prices (Also available from yfinance..)
+
 
 if __name__ == "__main__":
     main()

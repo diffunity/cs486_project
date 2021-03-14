@@ -16,8 +16,8 @@ SELECTED_STOCK_TICKERS = [
     "PFE",  # Pfizer Inc.
     "MSFT",  # Microsoft Corp.
 ]
-START_TIME = datetime(2011, 2, 18)
-END_TIME = datetime(2021, 2, 19)
+START_TIME = datetime(2006, 1, 1)
+END_TIME = datetime(2017, 12, 31)
 DATE_FMT = "%Y-%m-%d"  # Date format for yfinance
 CSV_HEADER = ["Date", "Open", "Close", "High", "Low", "Volume", "MA7", "MA30"]
 
