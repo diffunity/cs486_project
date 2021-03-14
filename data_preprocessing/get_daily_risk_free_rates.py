@@ -3,7 +3,7 @@ import math
 from datetime import datetime
 
 READ_DATE_FMT = "%m/%d/%Y"
-WRITE_DATE_FMT = "%Y-%m-%d"
+WRITE_DATE_FMT = "%Y-%m-%d %H:%M:%S"
 
 
 def cmt_rate_to_apy(cmt_rate):
@@ -48,9 +48,6 @@ def main():
             apy = cmt_rate_to_apy(one_mo_cmt_rate)
             daily_rate = (1 + apy) ** (1 / 365)  # assume 365 days in year
             daily_rate -= 1
-            # except OverflowError:
-            #     # daily rate negligible, just approximate to 0
-            #     daily_rate = 0.0
 
             writer.writerow([date_str, daily_rate])
 
