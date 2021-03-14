@@ -12,7 +12,7 @@ START_DATE = datetime(2006, 1, 5)
 INITIAL_PORTFOLIO_VAL = 100000
 
 # Not sure if we want to compute metrics using test period
-# if so, use following:
+# if so, use the following:
 
 
 def construct_price_df():
@@ -34,8 +34,6 @@ def construct_price_df():
     ef = EfficientFrontier(mu, S)
     weights = ef.max_sharpe()
     cleaned_weights = ef.clean_weights()
-    # ef.save_weights_to_file("weights.txt")  # saves to file
-    print(cleaned_weights)
     ef.portfolio_performance(verbose=True)
     # Expected annual return: 31.9%, Sharpe Ratio: 3.15
 
@@ -58,10 +56,6 @@ def get_mean_variance_share_allocation():
 
     ef = EfficientFrontier(mu, S)
     weights = ef.max_sharpe()
-    cleaned_weights = ef.clean_weights()
-    ef.save_weights_to_file("weights.txt")  # saves to file
-    print(cleaned_weights)
-    ef.portfolio_performance(verbose=True)
 
     _, ticker_to_closing_prices_at_test_start = get_ticker_to_closing_prices(
         TEST_START_DATE, TEST_END_DATE
