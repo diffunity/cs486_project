@@ -1,0 +1,13 @@
+stocks:
+  stocks_tradable: ['EBAY', 'MS', 'KO', 'MU', 'D', 'DAL', 'FCX', 'HAL', 'NFLX', 'AMT', 'MRK']
+  sentiments:
+    days: 0
+  train:
+    start_date: "2010-01-01"
+    end_date: '2020-01-01'
+  validation:
+    start_date: 
+    end_date:
+  test:
+    start_date:
+    end_date:
